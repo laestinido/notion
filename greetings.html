@@ -103,11 +103,11 @@
                 minutes += " AM"
             }
             hrs = today.getHours();
-            if (hrs < 12)
+            if (hrs < 12 && hrs >= 3)
                 greet = 'Good Morning Lenard';
             else if (hrs >= 12 && hrs <= 17)
                 greet = 'Good Afternoon Lenard';
-            else if (hrs >= 17 && hrs <= 24)
+            else if (hrs >= 17 || hrs < 3)
                 greet = 'Good Evening Lenard';
             // console.log(today.toLocaleTimeString());
             document.getElementById('greet').innerHTML = greet;
