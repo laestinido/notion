@@ -111,12 +111,11 @@ function clock() {
 var today = new Date();
 var hour = zeros(twelveHour(today.getHours()));
 var minutes = zeros(today.getMinutes());
-var seconds = zeros(today.getSeconds());
 if(twelveHour(today.getHours()) >12){
-    seconds+=" PM"
+    minutes+=" PM"
 }
 else{
-    seconds+=" AM"
+    minutes+=" AM"
 }
 hrs = today.getHours();
 if (hrs < 12)
@@ -127,7 +126,7 @@ if (hrs < 12)
         greet = 'Good Evening Lenard';
 // console.log(today.toLocaleTimeString());
 document.getElementById('greet').innerHTML = greet;
-document.getElementById('time').innerHTML = hour + ":" + minutes + ":" + seconds;
+document.getElementById('time').innerHTML = hour + " : " + minutes;
 }
 
 function twelveHour(hour) {
